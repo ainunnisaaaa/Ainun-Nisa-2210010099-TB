@@ -410,6 +410,7 @@ public class MainMenu extends javax.swing.JFrame {
         inputKaryawan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         java.awt.GridBagLayout inputKaryawanLayout = new java.awt.GridBagLayout();
         inputKaryawanLayout.columnWidths = new int[] {0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0};
+        inputKaryawanLayout.rowHeights = new int[] {0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0};
         inputKaryawan.setLayout(inputKaryawanLayout);
 
         jLabel2.setText("Nama");
@@ -595,13 +596,11 @@ public class MainMenu extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Karyawan", karyawan);
 
-        jabatan.setLayout(new java.awt.GridLayout(0, 1));
-
         inputJabatan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        java.awt.GridBagLayout inputJabatanLayout = new java.awt.GridBagLayout();
-        inputJabatanLayout.columnWidths = new int[] {0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0};
-        inputJabatanLayout.rowHeights = new int[] {0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0};
-        inputJabatan.setLayout(inputJabatanLayout);
+        java.awt.GridBagLayout inputJabatanLayout1 = new java.awt.GridBagLayout();
+        inputJabatanLayout1.columnWidths = new int[] {0, 15, 0, 15, 0, 15, 0, 15, 0};
+        inputJabatanLayout1.rowHeights = new int[] {0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0};
+        inputJabatan.setLayout(inputJabatanLayout1);
 
         jLabel12.setText("Nama Jabatan");
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -613,12 +612,12 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel13.setText("Gaji Pokok");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         inputJabatan.add(jLabel13, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 4;
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         inputJabatan.add(txtNama2, gridBagConstraints);
 
@@ -630,7 +629,7 @@ public class MainMenu extends javax.swing.JFrame {
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
-        gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridy = 8;
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
         inputJabatan.add(btnTambah2, gridBagConstraints);
 
@@ -641,8 +640,8 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
-        gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 8;
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 80);
         inputJabatan.add(btnUbah2, gridBagConstraints);
 
@@ -653,17 +652,15 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 4;
-        gridBagConstraints.gridy = 16;
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 8;
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
         inputJabatan.add(btnHapus2, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         inputJabatan.add(txtNama3, gridBagConstraints);
-
-        jabatan.add(inputJabatan);
 
         tabelJabatan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         tabelJabatan.setLayout(new java.awt.GridBagLayout());
@@ -700,11 +697,6 @@ public class MainMenu extends javax.swing.JFrame {
         tabelJabatan.add(btnCari, gridBagConstraints);
 
         btnCetak2.setText("Cetak");
-        btnCetak2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCetak2ActionPerformed(evt);
-            }
-        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -745,7 +737,20 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(4, 4, 4, 4);
         tabelJabatan.add(jScrollPane6, gridBagConstraints);
 
-        jabatan.add(tabelJabatan);
+        javax.swing.GroupLayout jabatanLayout = new javax.swing.GroupLayout(jabatan);
+        jabatan.setLayout(jabatanLayout);
+        jabatanLayout.setHorizontalGroup(
+            jabatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(inputJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 832, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(tabelJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 832, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jabatanLayout.setVerticalGroup(
+            jabatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jabatanLayout.createSequentialGroup()
+                .addComponent(inputJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(tabelJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         jTabbedPane1.addTab("Jabatan", jabatan);
 
@@ -966,13 +971,57 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnTambahActionPerformed
 
-    private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbahActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUbahActionPerformed
+    private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            if (jTable1.getSelectedRow() == -1) {
+                throw new Exception("Pilih data yang akan diubah");
+            }
+            validateInput();
+            
+            String sql = "UPDATE Karyawan SET Nama=?, Alamat=?, TanggalLahir=?, JabatanID=(SELECT JabatanID FROM Jabatan WHERE NamaJabatan=?) WHERE Nama=?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, txtNama.getText().trim());
+            pstmt.setString(2, jTextArea1.getText().trim());
+            pstmt.setDate(3, new java.sql.Date(jDateChooser1.getDate().getTime()));
+            pstmt.setString(4, cbKategori.getSelectedItem().toString());
+            pstmt.setString(5, jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+            
+            pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Data karyawan berhasil diubah");
+            refreshTables();
+            refreshKaryawanComboBox();
+            clearKaryawanFields();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Validasi", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
-    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHapusActionPerformed
+    private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            if (jTable1.getSelectedRow() == -1) {
+                throw new Exception("Pilih data yang akan dihapus");
+            }
+            
+            int confirm = JOptionPane.showConfirmDialog(this,
+                "Apakah Anda yakin ingin menghapus data ini?",
+                "Konfirmasi Hapus",
+                JOptionPane.YES_NO_OPTION);
+                
+            if (confirm == JOptionPane.YES_OPTION) {
+                String sql = "DELETE FROM Karyawan WHERE Nama=?";
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, jTable1.getValueAt(jTable1.getSelectedRow(), 0).toString());
+                
+                pstmt.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Data karyawan berhasil dihapus");
+                refreshTables();
+                refreshKaryawanComboBox();
+                clearKaryawanFields();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
     private void btnCari2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCari2ActionPerformed
         String keyword = jTextField3.getText().trim();
@@ -1042,16 +1091,34 @@ public class MainMenu extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCetak2ActionPerformed
 
 
-    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-        int row = jTable1.getSelectedRow();
-        if(row >= 0) {
-            txtNama.setText(jTable1.getValueAt(row, 1).toString());
-            jTextArea1.setText(jTable1.getValueAt(row, 2).toString());
-            jDateChooser1.setDate((java.util.Date)jTable1.getValueAt(row, 3));
-            cbKategori.setSelectedItem(jTable1.getValueAt(row, 4).toString());
-            toggleEditMode(true);
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {
+        try {
+            int row = jTable1.getSelectedRow();
+            if(row >= 0) {
+                txtNama.setText(jTable1.getValueAt(row, 0).toString());
+                jTextArea1.setText(jTable1.getValueAt(row, 1).toString());
+                
+                // Handle date conversion
+                Object dateValue = jTable1.getValueAt(row, 2);
+                if (dateValue instanceof java.util.Date) {
+                    jDateChooser1.setDate((java.util.Date) dateValue);
+                } else if (dateValue instanceof java.sql.Date) {
+                    jDateChooser1.setDate(new java.util.Date(((java.sql.Date) dateValue).getTime()));
+                } else if (dateValue instanceof String) {
+                    try {
+                        java.util.Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateValue.toString());
+                        jDateChooser1.setDate(date);
+                    } catch (Exception e) {
+                        System.err.println("Error parsing date: " + e.getMessage());
+                    }
+                }
+                
+                cbKategori.setSelectedItem(jTable1.getValueAt(row, 3).toString());
+            }
+        } catch (Exception e) {
+            System.err.println("Error selecting row: " + e.getMessage());
         }
-    }//GEN-LAST:event_jTable1MouseClicked
+    }
 
     private void btnTambah2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambah2ActionPerformed
         try {
@@ -1073,20 +1140,61 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnTambah2ActionPerformed
 
-    private void btnUbah2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbah2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUbah2ActionPerformed
+    private void btnUbah2ActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            if (jTable3.getSelectedRow() == -1) {
+                throw new Exception("Pilih data yang akan diubah");
+            }
+            validateJabatan();
+            
+            String sql = "UPDATE Jabatan SET NamaJabatan=?, GajiPokok=? WHERE NamaJabatan=?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, txtNama3.getText().trim());
+            pstmt.setDouble(2, Double.parseDouble(txtNama2.getText().trim()));
+            pstmt.setString(3, jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString());
+            
+            pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Data jabatan berhasil diubah");
+            refreshTables();
+            refreshJabatanComboBox();
+            clearJabatanFields();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Validasi", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
-    private void btnHapus2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapus2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHapus2ActionPerformed
+    private void btnHapus2ActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            if (jTable3.getSelectedRow() == -1) {
+                throw new Exception("Pilih data yang akan dihapus");
+            }
+            
+            int confirm = JOptionPane.showConfirmDialog(this,
+                "Apakah Anda yakin ingin menghapus data ini?\nMenghapus jabatan akan menghapus data karyawan terkait!",
+                "Konfirmasi Hapus",
+                JOptionPane.YES_NO_OPTION);
+                
+            if (confirm == JOptionPane.YES_OPTION) {
+                String sql = "DELETE FROM Jabatan WHERE NamaJabatan=?";
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, jTable3.getValueAt(jTable3.getSelectedRow(), 0).toString());
+                
+                pstmt.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Data jabatan berhasil dihapus");
+                refreshTables();
+                refreshJabatanComboBox();
+                clearJabatanFields();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
     private void jTable3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable3MouseClicked
         int row = jTable3.getSelectedRow();
         if(row >= 0) {
-            txtNama3.setText(jTable3.getValueAt(row, 1).toString());
-            txtNama2.setText(jTable3.getValueAt(row, 2).toString());
-            toggleEditMode(true);
+            txtNama3.setText(jTable3.getValueAt(row, 0).toString());
+            txtNama2.setText(jTable3.getValueAt(row, 1).toString());
         }
     }//GEN-LAST:event_jTable3MouseClicked
 
@@ -1094,13 +1202,55 @@ public class MainMenu extends javax.swing.JFrame {
         jDateChooser2.setDate(new java.util.Date());
     }//GEN-LAST:event_btnSekarangActionPerformed
 
-    private void btnUbah1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbah1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUbah1ActionPerformed
+    private void btnUbah1ActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            if (jTable2.getSelectedRow() == -1) {
+                throw new Exception("Pilih data yang akan diubah");
+            }
+            validateAbsensi();
+            
+            String sql = "UPDATE Absensi SET KaryawanID=(SELECT KaryawanID FROM Karyawan WHERE Nama=?), Tanggal=?, Status=? " +
+                        "WHERE KaryawanID=(SELECT KaryawanID FROM Karyawan WHERE Nama=?) AND Tanggal=?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, cbKategori1.getSelectedItem().toString());
+            pstmt.setDate(2, new java.sql.Date(jDateChooser2.getDate().getTime()));
+            pstmt.setString(3, cbKategori2.getSelectedItem().toString());
+            pstmt.setString(4, jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+            pstmt.setDate(5, new java.sql.Date(((java.util.Date)jTable2.getValueAt(jTable2.getSelectedRow(), 1)).getTime()));
+            
+            pstmt.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Data absensi berhasil diubah");
+            refreshTables();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Validasi", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
-    private void btnHapus1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapus1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnHapus1ActionPerformed
+    private void btnHapus1ActionPerformed(java.awt.event.ActionEvent evt) {
+        try {
+            if (jTable2.getSelectedRow() == -1) {
+                throw new Exception("Pilih data yang akan dihapus");
+            }
+            
+            int confirm = JOptionPane.showConfirmDialog(this,
+                "Apakah Anda yakin ingin menghapus data ini?",
+                "Konfirmasi Hapus",
+                JOptionPane.YES_NO_OPTION);
+                
+            if (confirm == JOptionPane.YES_OPTION) {
+                String sql = "DELETE FROM Absensi WHERE KaryawanID=(SELECT KaryawanID FROM Karyawan WHERE Nama=?) AND Tanggal=?";
+                PreparedStatement pstmt = conn.prepareStatement(sql);
+                pstmt.setString(1, jTable2.getValueAt(jTable2.getSelectedRow(), 0).toString());
+                pstmt.setDate(2, new java.sql.Date(((java.util.Date)jTable2.getValueAt(jTable2.getSelectedRow(), 1)).getTime()));
+                
+                pstmt.executeUpdate();
+                JOptionPane.showMessageDialog(this, "Data absensi berhasil dihapus");
+                refreshTables();
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Error: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
 
     private void btnTambah3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambah3ActionPerformed
         try {
@@ -1172,13 +1322,31 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }
 
-    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
-        int row = jTable2.getSelectedRow();
-        if(row >= 0) {
-            cbKategori1.setSelectedItem(jTable2.getValueAt(row, 1).toString());
-            jDateChooser2.setDate((java.util.Date)jTable2.getValueAt(row, 2));
-            cbKategori2.setSelectedItem(jTable2.getValueAt(row, 3).toString());
-            toggleEditMode(true);
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {
+        try {
+            int row = jTable2.getSelectedRow();
+            if(row >= 0) {
+                cbKategori1.setSelectedItem(jTable2.getValueAt(row, 0).toString());
+                
+                // Handle date conversion
+                Object dateValue = jTable2.getValueAt(row, 1);
+                if (dateValue instanceof java.util.Date) {
+                    jDateChooser2.setDate((java.util.Date) dateValue);
+                } else if (dateValue instanceof java.sql.Date) {
+                    jDateChooser2.setDate(new java.util.Date(((java.sql.Date) dateValue).getTime()));
+                } else if (dateValue instanceof String) {
+                    try {
+                        java.util.Date date = new SimpleDateFormat("yyyy-MM-dd").parse(dateValue.toString());
+                        jDateChooser2.setDate(date);
+                    } catch (Exception e) {
+                        System.err.println("Error parsing date: " + e.getMessage());
+                    }
+                }
+                
+                cbKategori2.setSelectedItem(jTable2.getValueAt(row, 2).toString());
+            }
+        } catch (Exception e) {
+            System.err.println("Error selecting row: " + e.getMessage());
         }
     }//GEN-LAST:event_jTable2MouseClicked
 

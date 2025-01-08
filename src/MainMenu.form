@@ -1217,9 +1217,22 @@
             </Constraint>
           </Constraints>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignGridLayout">
-            <Property name="columns" type="int" value="1"/>
-            <Property name="rows" type="int" value="0"/>
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="inputJabatan" min="-2" pref="832" max="-2" attributes="0"/>
+                  <Component id="tabelJabatan" min="-2" pref="832" max="-2" attributes="0"/>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="inputJabatan" min="-2" pref="372" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Component id="tabelJabatan" min="-2" pref="372" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
           </Layout>
           <SubComponents>
             <Container class="javax.swing.JPanel" name="inputJabatan">
@@ -1247,14 +1260,14 @@
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                      <GridBagConstraints gridX="0" gridY="4" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="22" weightX="0.0" weightY="0.0"/>
+                      <GridBagConstraints gridX="0" gridY="2" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="22" weightX="0.0" weightY="0.0"/>
                     </Constraint>
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtNama2">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                      <GridBagConstraints gridX="2" gridY="4" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                      <GridBagConstraints gridX="4" gridY="2" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -1267,7 +1280,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                      <GridBagConstraints gridX="0" gridY="16" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="20" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                      <GridBagConstraints gridX="0" gridY="8" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="20" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -1280,7 +1293,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                      <GridBagConstraints gridX="2" gridY="16" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="20" insetsLeft="0" insetsBottom="0" insetsRight="80" anchor="10" weightX="0.0" weightY="0.0"/>
+                      <GridBagConstraints gridX="4" gridY="8" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="20" insetsLeft="0" insetsBottom="0" insetsRight="80" anchor="10" weightX="0.0" weightY="0.0"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -1293,22 +1306,22 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                      <GridBagConstraints gridX="4" gridY="16" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="20" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                      <GridBagConstraints gridX="8" gridY="8" gridWidth="1" gridHeight="1" fill="0" ipadX="0" ipadY="0" insetsTop="20" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
                     </Constraint>
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txtNama3">
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout" value="org.netbeans.modules.form.compat2.layouts.DesignGridBagLayout$GridBagConstraintsDescription">
-                      <GridBagConstraints gridX="2" gridY="0" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
+                      <GridBagConstraints gridX="4" gridY="0" gridWidth="1" gridHeight="1" fill="2" ipadX="0" ipadY="0" insetsTop="0" insetsLeft="0" insetsBottom="0" insetsRight="0" anchor="10" weightX="0.0" weightY="0.0"/>
                     </Constraint>
                   </Constraints>
                 </Component>
               </SubComponents>
               <LayoutCode>
                 <CodeStatement>
-                  <CodeExpression id="67_inputJabatanLayout">
-                    <CodeVariable name="inputJabatanLayout" type="4096" declaredType="java.awt.GridBagLayout"/>
+                  <CodeExpression id="67_inputJabatanLayout1">
+                    <CodeVariable name="inputJabatanLayout1" type="4096" declaredType="java.awt.GridBagLayout"/>
                     <ExpressionOrigin>
                       <ExpressionProvider type="CodeConstructor">
                         <CodeConstructor class="java.awt.GridBagLayout" parameterTypes=""/>
@@ -1316,11 +1329,11 @@
                     </ExpressionOrigin>
                   </CodeExpression>
                   <StatementProvider type="CodeExpression">
-                    <CodeExpression id="67_inputJabatanLayout"/>
+                    <CodeExpression id="67_inputJabatanLayout1"/>
                   </StatementProvider>
                 </CodeStatement>
                 <CodeStatement>
-                  <CodeExpression id="67_inputJabatanLayout"/>
+                  <CodeExpression id="67_inputJabatanLayout1"/>
                   <StatementProvider type="CodeField">
                     <CodeField name="columnWidths" class="java.awt.GridBagLayout"/>
                   </StatementProvider>
@@ -1328,14 +1341,14 @@
                     <CodeExpression id="68">
                       <ExpressionOrigin>
                         <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
-                          <PropertyValue value="[0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0]"/>
+                          <PropertyValue value="[0, 15, 0, 15, 0, 15, 0, 15, 0]"/>
                         </Value>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
                 </CodeStatement>
                 <CodeStatement>
-                  <CodeExpression id="67_inputJabatanLayout"/>
+                  <CodeExpression id="67_inputJabatanLayout1"/>
                   <StatementProvider type="CodeField">
                     <CodeField name="rowHeights" class="java.awt.GridBagLayout"/>
                   </StatementProvider>
@@ -1343,7 +1356,7 @@
                     <CodeExpression id="69">
                       <ExpressionOrigin>
                         <Value type="[I" editor="org.netbeans.modules.form.layoutsupport.delegates.GridBagLayoutSupport$IntArrayPropertyEditor">
-                          <PropertyValue value="[0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0]"/>
+                          <PropertyValue value="[0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0, 7, 0]"/>
                         </Value>
                       </ExpressionOrigin>
                     </CodeExpression>
@@ -1362,7 +1375,7 @@
                     <CodeMethod name="setLayout" class="java.awt.Container" parameterTypes="java.awt.LayoutManager"/>
                   </StatementProvider>
                   <Parameters>
-                    <CodeExpression id="67_inputJabatanLayout"/>
+                    <CodeExpression id="67_inputJabatanLayout1"/>
                   </Parameters>
                 </CodeStatement>
                 <CodeStatement>
@@ -1468,7 +1481,7 @@
                   <Parameters>
                     <CodeExpression id="78">
                       <ExpressionOrigin>
-                        <Value type="int" value="4"/>
+                        <Value type="int" value="2"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1524,7 +1537,7 @@
                   <Parameters>
                     <CodeExpression id="82">
                       <ExpressionOrigin>
-                        <Value type="int" value="2"/>
+                        <Value type="int" value="4"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1537,7 +1550,7 @@
                   <Parameters>
                     <CodeExpression id="83">
                       <ExpressionOrigin>
-                        <Value type="int" value="4"/>
+                        <Value type="int" value="2"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1606,7 +1619,7 @@
                   <Parameters>
                     <CodeExpression id="88">
                       <ExpressionOrigin>
-                        <Value type="int" value="16"/>
+                        <Value type="int" value="8"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1664,7 +1677,7 @@
                   <Parameters>
                     <CodeExpression id="92">
                       <ExpressionOrigin>
-                        <Value type="int" value="2"/>
+                        <Value type="int" value="4"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1677,7 +1690,7 @@
                   <Parameters>
                     <CodeExpression id="93">
                       <ExpressionOrigin>
-                        <Value type="int" value="16"/>
+                        <Value type="int" value="8"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1735,7 +1748,7 @@
                   <Parameters>
                     <CodeExpression id="97">
                       <ExpressionOrigin>
-                        <Value type="int" value="4"/>
+                        <Value type="int" value="8"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1748,7 +1761,7 @@
                   <Parameters>
                     <CodeExpression id="98">
                       <ExpressionOrigin>
-                        <Value type="int" value="16"/>
+                        <Value type="int" value="8"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
@@ -1806,7 +1819,7 @@
                   <Parameters>
                     <CodeExpression id="102">
                       <ExpressionOrigin>
-                        <Value type="int" value="2"/>
+                        <Value type="int" value="4"/>
                       </ExpressionOrigin>
                     </CodeExpression>
                   </Parameters>
