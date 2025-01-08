@@ -45,37 +45,67 @@ public class PDFGenerator {
         document.add(date);
     }
     
-    private static void addFooter(Document document, String reportType, int totalRecords) throws DocumentException {
-        Paragraph line = new Paragraph("_____________________________________________________________________________");
-        line.setAlignment(Element.ALIGN_CENTER);
-        line.setSpacingBefore(20);
-        document.add(line);
+    static class FooterEvent extends PdfPageEventHelper {
+        private String reportType;
+        private int totalRecords;
         
-        Font footerTitleFont = new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD);
-        Paragraph footerTitle = new Paragraph("Informasi Laporan", footerTitleFont);
-        footerTitle.setAlignment(Element.ALIGN_CENTER);
-        footerTitle.setSpacingAfter(10);
-        document.add(footerTitle);
+        public FooterEvent(String reportType, int totalRecords) {
+            this.reportType = reportType;
+            this.totalRecords = totalRecords;
+        }
         
-        SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm:ss");
-        String footer = String.format(
-            "Jenis Laporan: %s\n" +
-            "Total Data: %d record(s)\n" +
-            "Waktu Cetak: %s\n" +
-            "Dicetak oleh: Admin Sistem\n" +
-            "Status: VALID\n" +
-            "© %d Sistem Informasi Kepegawaian. All rights reserved.",
-            reportType,
-            totalRecords,
-            sdf.format(new Date()),
-            Calendar.getInstance().get(Calendar.YEAR)
-        );
-        
-        Paragraph footerText = new Paragraph(footer, footerFont);
-        footerText.setAlignment(Element.ALIGN_CENTER);
-        document.add(footerText);
+        @Override
+        public void onEndPage(PdfWriter writer, Document document) {
+            try {
+                PdfPTable footerTable = new PdfPTable(1);
+                footerTable.setTotalWidth(document.getPageSize().getWidth() - document.leftMargin() - document.rightMargin());
+                footerTable.setLockedWidth(true);
+                
+                // Add line
+                PdfPCell lineCell = new PdfPCell(new Phrase("_____________________________________________________________________________"));
+                lineCell.setBorder(Rectangle.NO_BORDER);
+                lineCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                footerTable.addCell(lineCell);
+                
+                // Footer content
+                Font footerTitleFont = new Font(Font.FontFamily.HELVETICA, 10, Font.BOLD);
+                PdfPCell titleCell = new PdfPCell(new Phrase("Informasi Laporan", footerTitleFont));
+                titleCell.setBorder(Rectangle.NO_BORDER);
+                titleCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                titleCell.setPaddingTop(10);
+                footerTable.addCell(titleCell);
+                
+                SimpleDateFormat sdf = new SimpleDateFormat("EEEE, dd MMMM yyyy HH:mm:ss");
+                String footer = String.format(
+                    "Jenis Laporan: %s\n" +
+                    "Total Data: %d record(s)\n" +
+                    "Waktu Cetak: %s\n" +
+                    "Dicetak oleh: Admin Sistem\n" +
+                    "Status: VALID\n" +
+                    "© %d Sistem Informasi Kepegawaian. All rights reserved.",
+                    reportType,
+                    totalRecords,
+                    sdf.format(new Date()),
+                    Calendar.getInstance().get(Calendar.YEAR)
+                );
+                
+                PdfPCell footerCell = new PdfPCell(new Phrase(footer, footerFont));
+                footerCell.setBorder(Rectangle.NO_BORDER);
+                footerCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                footerTable.addCell(footerCell);
+                
+                // Position footer at bottom of page
+                footerTable.writeSelectedRows(0, -1, 
+                    document.leftMargin(),
+                    document.bottomMargin() + 80,
+                    writer.getDirectContent()
+                );
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
-    
+
     private static PdfPTable createTable(JTable table, int columnCount) throws DocumentException {
         PdfPTable pdfTable = new PdfPTable(columnCount);
         pdfTable.setWidthPercentage(100);
@@ -111,22 +141,18 @@ public class PDFGenerator {
             throw new Exception("Tidak ada data untuk dicetak");
         }
         
-        Document document = new Document(PageSize.A4, 36, 36, 48, 36);
+        Document document = new Document(PageSize.A4, 36, 36, 48, 120); // Increased bottom margin for footer
         try {
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(path));
+            writer.setPageEvent(new FooterEvent("Data Karyawan", table.getRowCount()));
             document.open();
             
-            // Add watermark
-            PdfContentByte canvas = writer.getDirectContentUnder();
-            Font watermarkFont = new Font(Font.FontFamily.HELVETICA, 60, Font.BOLD, new BaseColor(232, 245, 233));
-            Phrase watermark = new Phrase("KEPEGAWAIAN", watermarkFont);
-            ColumnText.showTextAligned(canvas, Element.ALIGN_CENTER, watermark, 
-                                     297, 421, 45); // coordinates and rotation
-            
             addMetaData(document, "Laporan Data Karyawan");
-            addHeader(document, "Laporan Data Karyawan");            
-            document.add(createTable(table, 4));            
-            addFooter(document, "Data Karyawan", table.getRowCount());
+            addHeader(document, "Laporan Data Karyawan");
+            
+            PdfPTable pdfTable = createTable(table, 4);
+            pdfTable.setKeepTogether(true); // Prevents table from breaking across pages
+            document.add(pdfTable);
             
         } finally {
             if (document != null && document.isOpen()) {
@@ -140,22 +166,18 @@ public class PDFGenerator {
             throw new Exception("Tidak ada data untuk dicetak");
         }
         
-        Document document = new Document(PageSize.A4, 36, 36, 48, 36);
+        Document document = new Document(PageSize.A4, 36, 36, 48, 120); // Increased bottom margin for footer
         try {
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(path));
+            writer.setPageEvent(new FooterEvent("Data Jabatan", table.getRowCount()));
             document.open();
             
-            // Add watermark
-            PdfContentByte canvas = writer.getDirectContentUnder();
-            Font watermarkFont = new Font(Font.FontFamily.HELVETICA, 60, Font.BOLD, new BaseColor(232, 245, 233));
-            Phrase watermark = new Phrase("KEPEGAWAIAN", watermarkFont);
-            ColumnText.showTextAligned(canvas, Element.ALIGN_CENTER, watermark, 
-                                     297, 421, 45); // coordinates and rotation
-            
             addMetaData(document, "Laporan Data Jabatan");
-            addHeader(document, "Laporan Data Jabatan");            
-            document.add(createTable(table, 2));            
-            addFooter(document, "Data Jabatan", table.getRowCount());
+            addHeader(document, "Laporan Data Jabatan");
+            
+            PdfPTable pdfTable = createTable(table, 2);
+            pdfTable.setKeepTogether(true); // Prevents table from breaking across pages
+            document.add(pdfTable);
             
         } finally {
             if (document != null && document.isOpen()) {
@@ -169,22 +191,18 @@ public class PDFGenerator {
             throw new Exception("Tidak ada data untuk dicetak");
         }
         
-        Document document = new Document(PageSize.A4, 36, 36, 48, 36);
+        Document document = new Document(PageSize.A4, 36, 36, 48, 120); // Increased bottom margin for footer
         try {
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(path));
+            writer.setPageEvent(new FooterEvent("Data Absensi", table.getRowCount()));
             document.open();
             
-            // Add watermark
-            PdfContentByte canvas = writer.getDirectContentUnder();
-            Font watermarkFont = new Font(Font.FontFamily.HELVETICA, 60, Font.BOLD, new BaseColor(232, 245, 233));
-            Phrase watermark = new Phrase("KEPEGAWAIAN", watermarkFont);
-            ColumnText.showTextAligned(canvas, Element.ALIGN_CENTER, watermark, 
-                                     297, 421, 45); // coordinates and rotation
-            
             addMetaData(document, "Laporan Data Absensi");
-            addHeader(document, "Laporan Data Absensi");            
-            document.add(createTable(table, 3));            
-            addFooter(document, "Data Absensi", table.getRowCount());
+            addHeader(document, "Laporan Data Absensi");
+            
+            PdfPTable pdfTable = createTable(table, 3);
+            pdfTable.setKeepTogether(true); // Prevents table from breaking across pages
+            document.add(pdfTable);
             
         } finally {
             if (document != null && document.isOpen()) {
