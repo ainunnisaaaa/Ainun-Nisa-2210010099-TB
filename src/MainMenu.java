@@ -402,11 +402,13 @@ public class MainMenu extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
+        jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
         jTabbedPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jTabbedPane1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         karyawan.setLayout(new java.awt.GridLayout(0, 1));
 
+        inputKaryawan.setBackground(new java.awt.Color(204, 255, 204));
         inputKaryawan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         java.awt.GridBagLayout inputKaryawanLayout = new java.awt.GridBagLayout();
         inputKaryawanLayout.columnWidths = new int[] {0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0};
@@ -446,6 +448,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         inputKaryawan.add(cbKategori, gridBagConstraints);
 
+        btnTambah.setBackground(new java.awt.Color(0, 153, 0));
+        btnTambah.setForeground(new java.awt.Color(255, 255, 255));
         btnTambah.setText("Tambahkan");
         btnTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -458,6 +462,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
         inputKaryawan.add(btnTambah, gridBagConstraints);
 
+        btnUbah.setBackground(new java.awt.Color(102, 102, 102));
+        btnUbah.setForeground(new java.awt.Color(255, 255, 255));
         btnUbah.setText("Ubah");
         btnUbah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -472,6 +478,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
         inputKaryawan.add(btnUbah, gridBagConstraints);
 
+        btnHapus.setBackground(new java.awt.Color(204, 0, 0));
+        btnHapus.setForeground(new java.awt.Color(255, 255, 255));
         btnHapus.setText("Hapus");
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -512,6 +520,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         karyawan.add(inputKaryawan);
 
+        tabelKaryawan.setBackground(new java.awt.Color(204, 255, 204));
         tabelKaryawan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         tabelKaryawan.setLayout(new java.awt.GridBagLayout());
 
@@ -574,7 +583,7 @@ public class MainMenu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jTable1.setPreferredSize(new java.awt.Dimension(60, 80));
+        jTable1.setPreferredSize(new java.awt.Dimension(60, 500));
         jTable1.setShowGrid(true);
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -596,6 +605,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Karyawan", karyawan);
 
+        inputJabatan.setBackground(new java.awt.Color(204, 255, 204));
         inputJabatan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         java.awt.GridBagLayout inputJabatanLayout1 = new java.awt.GridBagLayout();
         inputJabatanLayout1.columnWidths = new int[] {0, 15, 0, 15, 0, 15, 0, 15, 0};
@@ -621,6 +631,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         inputJabatan.add(txtNama2, gridBagConstraints);
 
+        btnTambah2.setBackground(new java.awt.Color(0, 153, 0));
+        btnTambah2.setForeground(new java.awt.Color(242, 242, 242));
         btnTambah2.setText("Tambahkan");
         btnTambah2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -633,6 +645,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
         inputJabatan.add(btnTambah2, gridBagConstraints);
 
+        btnUbah2.setBackground(new java.awt.Color(102, 102, 102));
+        btnUbah2.setForeground(new java.awt.Color(242, 242, 242));
         btnUbah2.setText("Ubah");
         btnUbah2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -645,6 +659,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 80);
         inputJabatan.add(btnUbah2, gridBagConstraints);
 
+        btnHapus2.setBackground(new java.awt.Color(204, 0, 0));
+        btnHapus2.setForeground(new java.awt.Color(255, 255, 255));
         btnHapus2.setText("Hapus");
         btnHapus2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -662,6 +678,7 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         inputJabatan.add(txtNama3, gridBagConstraints);
 
+        tabelJabatan.setBackground(new java.awt.Color(204, 255, 204));
         tabelJabatan.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         tabelJabatan.setLayout(new java.awt.GridBagLayout());
 
@@ -697,6 +714,11 @@ public class MainMenu extends javax.swing.JFrame {
         tabelJabatan.add(btnCari, gridBagConstraints);
 
         btnCetak2.setText("Cetak");
+        btnCetak2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCetak2ActionPerformed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
@@ -713,13 +735,22 @@ public class MainMenu extends javax.swing.JFrame {
                 {null, null, null},
                 {null, null, null},
                 {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
                 {null, null, null}
             },
             new String [] {
                 "Title 1", "Title 2", "Title 3"
             }
         ));
-        jTable3.setPreferredSize(new java.awt.Dimension(60, 80));
+        jTable3.setMaximumSize(new java.awt.Dimension(1000, 500));
+        jTable3.setMinimumSize(new java.awt.Dimension(1000, 500));
+        jTable3.setPreferredSize(new java.awt.Dimension(60, 500));
         jTable3.setShowGrid(true);
         jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -741,8 +772,8 @@ public class MainMenu extends javax.swing.JFrame {
         jabatan.setLayout(jabatanLayout);
         jabatanLayout.setHorizontalGroup(
             jabatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(inputJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 832, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(tabelJabatan, javax.swing.GroupLayout.PREFERRED_SIZE, 832, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(inputJabatan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tabelJabatan, javax.swing.GroupLayout.DEFAULT_SIZE, 832, Short.MAX_VALUE)
         );
         jabatanLayout.setVerticalGroup(
             jabatanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -756,6 +787,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         absensi.setLayout(new java.awt.GridLayout(0, 1));
 
+        inputAbsensi.setBackground(new java.awt.Color(204, 255, 204));
         inputAbsensi.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         java.awt.GridBagLayout inputAbsensiLayout = new java.awt.GridBagLayout();
         inputAbsensiLayout.columnWidths = new int[] {0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0, 15, 0};
@@ -803,6 +835,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.anchor = java.awt.GridBagConstraints.LINE_END;
         inputAbsensi.add(btnSekarang, gridBagConstraints);
 
+        btnUbah1.setBackground(new java.awt.Color(102, 102, 102));
+        btnUbah1.setForeground(new java.awt.Color(255, 255, 255));
         btnUbah1.setText("Ubah");
         btnUbah1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -817,6 +851,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 0, 0);
         inputAbsensi.add(btnUbah1, gridBagConstraints);
 
+        btnHapus1.setBackground(new java.awt.Color(204, 0, 0));
+        btnHapus1.setForeground(new java.awt.Color(255, 255, 255));
         btnHapus1.setText("Hapus");
         btnHapus1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -839,6 +875,8 @@ public class MainMenu extends javax.swing.JFrame {
         gridBagConstraints.insets = new java.awt.Insets(0, 0, 0, 4);
         inputAbsensi.add(jDateChooser2, gridBagConstraints);
 
+        btnTambah3.setBackground(new java.awt.Color(0, 153, 51));
+        btnTambah3.setForeground(new java.awt.Color(242, 242, 242));
         btnTambah3.setText("Tambahkan");
         btnTambah3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -860,6 +898,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         absensi.add(inputAbsensi);
 
+        tabelAbsensi.setBackground(new java.awt.Color(204, 255, 204));
         tabelAbsensi.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
         tabelAbsensi.setLayout(new java.awt.GridBagLayout());
 
@@ -922,7 +961,7 @@ public class MainMenu extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3"
             }
         ));
-        jTable2.setPreferredSize(new java.awt.Dimension(60, 80));
+        jTable2.setPreferredSize(new java.awt.Dimension(60, 500));
         jTable2.setShowGrid(true);
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1074,19 +1113,41 @@ public class MainMenu extends javax.swing.JFrame {
         }
     }
 
-    private void btnCetak2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCetak2ActionPerformed
-        try {
-            String path = System.getProperty("user.home") + "/Desktop/Laporan_Jabatan.pdf";
-            PDFGenerator.generateJabatanReport(jTable3, path);
+    private void btnCetak2ActionPerformed(java.awt.event.ActionEvent evt) {
+        if (jTable3.getRowCount() == 0) {
             JOptionPane.showMessageDialog(this, 
-                "Laporan berhasil dibuat!\nFile tersimpan di: " + path,
-                "Sukses",
-                JOptionPane.INFORMATION_MESSAGE);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this,
-                "Error membuat laporan: " + e.getMessage(),
-                "Error",
-                JOptionPane.ERROR_MESSAGE);
+                "Tidak ada data untuk dicetak",
+                "Peringatan",
+                JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        
+        int confirm = JOptionPane.showConfirmDialog(this,
+            "Apakah Anda yakin ingin mencetak laporan data jabatan?",
+            "Konfirmasi Cetak",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.QUESTION_MESSAGE);
+            
+        if (confirm == JOptionPane.YES_OPTION) {
+            try {
+                String path = System.getProperty("user.home") + "/Desktop/Laporan_Jabatan.pdf";
+                PDFGenerator.generateJabatanReport(jTable3, path);
+                
+                int openFile = JOptionPane.showConfirmDialog(this,
+                    "Laporan berhasil dibuat!\nFile tersimpan di: " + path + "\n\nApakah Anda ingin membuka file tersebut?",
+                    "Sukses",
+                    JOptionPane.YES_NO_OPTION,
+                    JOptionPane.INFORMATION_MESSAGE);
+                    
+                if (openFile == JOptionPane.YES_OPTION) {
+                    java.awt.Desktop.getDesktop().open(new java.io.File(path));
+                }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(this,
+                    "Error membuat laporan: " + e.getMessage(),
+                    "Error",
+                    JOptionPane.ERROR_MESSAGE);
+            }
         }
     }//GEN-LAST:event_btnCetak2ActionPerformed
 
@@ -1348,7 +1409,7 @@ public class MainMenu extends javax.swing.JFrame {
         } catch (Exception e) {
             System.err.println("Error selecting row: " + e.getMessage());
         }
-    }//GEN-LAST:event_jTable2MouseClicked
+    }                                    
 
     private void btnCariActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCariActionPerformed
         String keyword = jTextField5.getText().trim();
