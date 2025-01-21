@@ -44,7 +44,7 @@ Aplikasi desktop untuk mengelola data karyawan, jabatan, dan absensi dengan anta
 
 ## 📸 Preiview Aplikasi
 
-![Demo App](https://github.com/mariariaolpah/Maria-Olpah-2210010684-TB/blob/main/demo.gif)
+![Demo App](https://github.com/ainunnisaaaa/Ainun-Nisa-2210010099-TB/blob/main/demo.gif)
 
 ## 📝 Catatan
 
